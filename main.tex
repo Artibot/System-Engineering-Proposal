@@ -1,24 +1,65 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+\documentclass{report}
 
+\usepackage{biblatex}
+\addbibresource{References.bib}
+
+\usepackage{standalone}
+%\usepackage{import}
+\usepackage{Libraries}
 \title{}
 \author{}
 \date{}
+\pagestyle{empty}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancypagestyle{plain}{
+\lhead{
+\includegraphics[scale=0.205]{Images/Artibot_logo.png}}
+\rhead{\includegraphics[scale=.08]{Images/usn_logo.png}}}
+
+
+
+\fancypagestyle{super}{
+\rhead{
+%\includegraphics[scale=0.205]{Images/Artibot_logo.png} \\
+\rightmark}
+\lhead{
+%\includegraphics[scale=.08]{Images/usn_logo.png} \\ 
+\leftmark}}
+
+
+\definecolor{darkblue}{rgb}{0,0,.40}
+
+\renewcommand{\headrulewidth}{1pt}
+\setlength{\voffset}{0.3in}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+\color{darkblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{1pt}
+
+\renewcommand{\footrulewidth}{0pt}
 
 \begin{document}
-
- \section{}
+\pagestyle{super}
  
+ \chapter{Project management}
+ 
+ \newpage
+ 
+ \input{Project_proposal/Need_and_opportunity.tex}
+ \newpage
  \section{Stakeholders}
- 
- 
+ \input{Project_proposal/Stakeholders.tex}
  \section{Requirements}
  
  
   \section{Admin}
  
-\maketitle
+
 
 \section{Introduction}
 
+
+
+\printbibliography
 \end{document}
