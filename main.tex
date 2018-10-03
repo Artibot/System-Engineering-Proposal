@@ -38,8 +38,23 @@
 \renewcommand{\footrulewidth}{1pt}
 
 \renewcommand{\footrulewidth}{0pt}
-
+\dominitoc
 \begin{document}
+
+\pagestyle{plain}
+
+\pdfbookmark[0]{List of Chapters}{toc}
+\shorttoc{List of Chapters}{0}
+\adjustmtc
+\pdfbookmark[1]{Contents (detailed)}{toc (detailed)}
+ 
+\tableofcontents
+
+\listoftables
+
+\listoffigures
+
+\chapter*{LIST OF ABBREVIATIONS}
 \pagestyle{super}
  
  \chapter{Project management}
